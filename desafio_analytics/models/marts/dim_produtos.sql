@@ -29,7 +29,10 @@ with
     
     , join_final as (
         select 
-        p.id_produto	
+        {{ 
+            dbt_utils.surrogate_key(['id_produto', 'p.data_modificação']) 
+        }} as sk_produtos
+        , p.id_produto
         , p.nome
         , p.numero_produto	
         , p.flag_feito	
@@ -51,7 +54,6 @@ with
         , p.data_inicio_venda	
         , p.data_fim_venda	
         , p.data_descontinuado	
-        , p.guia_linha	
         , p.data_modificação
     from staging_produto p
     left join join_sub_categoria c
