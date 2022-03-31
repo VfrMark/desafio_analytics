@@ -9,13 +9,17 @@ sources:
       description: This table contains items required to make bicycles and bicycle subassemblies.
     - name: raw_location
     - name: raw_product
+      description: Fonte das informações sobre os produtos do departamento de manufatura.
     - name: raw_productcategory
+      description: Fonte das informações sobre as categorias dos produtos.
     - name: raw_productinventory
     - name: raw_productsubcategory
+      description: Fonte das informações sobre as subcategorias dos produtos.
     - name: raw_scrapreason
     - name: raw_transactionhistory
     - name: raw_transactionhistoryarchive
     - name: raw_workorder
+      description: Fonte das informações sobre o processo de pedido para manufatura de produtos.
     - name: raw_workorderrouting
       description: Work order details.
 

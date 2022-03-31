@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: 'dim_materiais'
-    description: "Tabela de dimensão a nível de produtos."
+    description: "Tabela de dimensão a nível de materiais necessários para fabricação de produtos."
     columns:
       - name: 'id_material'
         description: "Chave Primária."

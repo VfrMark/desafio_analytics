@@ -7,7 +7,7 @@ with
             , bin as caixa
             , quantity as quantidade_no_inventário
             , rowguid as guia_linha
-            , modifieddate as data_modificação
+            , modifieddate as data_modificacao
         from {{source('analytics','raw_productinventory')}}
     )
 

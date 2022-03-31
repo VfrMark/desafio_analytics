@@ -13,7 +13,7 @@ with
             , custo_hora
             , nome_local
             , capacidade_manufatura
-            , data_modificação
+            , data_modificacao
         from staging
     )
 

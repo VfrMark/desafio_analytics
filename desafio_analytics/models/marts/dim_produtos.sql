@@ -30,31 +30,33 @@ with
     , join_final as (
         select 
         {{ 
-            dbt_utils.surrogate_key(['id_produto', 'p.data_modificação']) 
+            dbt_utils.surrogate_key(['id_produto', 'p.data_modificacao']) 
         }} as sk_produtos
         , p.id_produto
         , p.nome
-        , p.numero_produto	
-        , p.flag_feito	
-        , p.flag_produtos_finalizados	
-        , p.cor	
-        , p.estoque_minimo_seguro	
-        , p.estoque_minimo_critico	
-        , p.custo_padrao	
-        , p.preco_venda	tamanho	
-        , p.unidade_medida_tamanho	
-        , p.unidade_medida_peso	peso	
-        , p.dias_manufatura	
-        , p.linha_produto	
-        , p.classe	
-        , p.estilo	
+        , p.numero_produto
+        , p.flag_feito
+        , p.flag_produtos_finalizados
+        , p.cor
+        , p.estoque_minimo_seguro
+        , p.estoque_minimo_critico
+        , p.custo_padrao
+        , p.preco_venda
+        , p.tamanho
+        , p.unidade_medida_tamanho
+        , p.peso
+        , p.unidade_medida_peso
+        , p.dias_manufatura
+        , p.linha_produto
+        , p.classe
+        , p.estilo
         , c.categoria
         , c.sub_categoria
-        , p.id_modelo_produto	
-        , p.data_inicio_venda	
-        , p.data_fim_venda	
-        , p.data_descontinuado	
-        , p.data_modificação
+        , p.modelo_produto
+        , p.data_inicio_venda
+        , p.data_fim_venda
+        , p.data_descontinuado
+        , p.data_modificacao
     from staging_produto p
     left join join_sub_categoria c
     on p.id_subcategoria_produto = c.id_subcategoria_produto

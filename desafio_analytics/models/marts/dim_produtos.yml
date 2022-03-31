@@ -1,0 +1,87 @@
+version: 2
+
+models:
+
+  - name: dim_produtos
+    description:  Tabela de dimensão de produtos vendidos ou utilizados na manufatura de produtos vendidos.
+    columns:
+
+      - name: sk_produtos
+        description: Chave surrogate da dimensão produto.
+        tests:
+          - not_null
+          - unique
+      - name: id_produto
+        description: Chave natural do produto.
+
+      - name: nome
+        description: Nome do produto.
+
+      - name: numero_produto
+        description: Número do produto.
+
+      - name: flag_feito
+        description: Flag que indica se o produto foi feito pela empresa ou comprado.
+
+      - name: flag_produtos_finalizados
+        description: Flag que indica se a empresa vende o produto ou não.
+
+      - name: cor
+        description: Cor do produto.
+
+      - name: estoque_minimo_seguro
+        description: Indica a quantidade do produto em estoque segura para a empresa.
+
+      - name: estoque_minimo_critico
+        description: Indica o nível limíte de estoque que aciona a compra ou fabricação do produto.
+
+      - name: custo_padrao
+        description: Custo padrão do produto.
+
+      - name: preco_venda
+        description: Preço de venda do produto.
+
+      - name: unidade_medida_tamanho
+        description: Unidade de medida da coluna tamanho.
+
+      - name: tamanho
+        description: Tamanho do produto.
+
+      - name: unidade_medida_peso
+        description: Unidade de medida da coluna peso.
+
+      - name: peso
+        description: Peso do produto.
+
+      - name: dias_manufatura
+        description: Número de dias necessários para a fabricação do produto.
+
+      - name: linha_produto
+        description: Linha do produto.
+
+      - name: classe
+        description: Classe do produto.
+
+      - name: estilo
+        description: Estilo do produto.
+
+      - name: categoria
+        description: Categoria do produto.
+
+      - name: sub_categoria
+        description: Subcategoria do produto.
+
+      - name: modelo_produto
+        description: Modelo do produto.
+
+      - name: data_inicio_venda
+        description: Data em que o produto estava disponível para venda.
+
+      - name: data_fim_venda
+        description: Data em que o produto deixou de estar disponível para venda.
+
+      - name: data_descontinuado
+        description: Data em que o produto foi descontinuado.
+
+      - name: data_modificacao
+        description: Data em que os dados do produto foram modificados.

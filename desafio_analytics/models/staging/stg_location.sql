@@ -5,7 +5,7 @@ with
             , name as nome_local
             , costrate as custo_hora
             , availability as capacidade_manufatura
-            , modifieddate as data_modificação
+            , modifieddate as data_modificacao
         from {{source('analytics','raw_location')}}
     )
     

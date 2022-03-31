@@ -12,7 +12,7 @@ with
             , perassemblyqty as nome_grupo_anuncio
             , startdate as data_inicio
             , enddate as data_fim
-            , modifieddate as data_modificada
+            , modifieddate as data_modificacao
         from source
     )
 select *

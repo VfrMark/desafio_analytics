@@ -13,8 +13,8 @@ with
             , "startdate" as data_inicio
             , "enddate" as data_fim
             , "duedate" as data_vencimento
-            , coalesce(scrapreasonid, 0) as id_razão_sucateado
-            , "modifieddate" as data_modificação
+            , coalesce(scrapreasonid, 'não sucateado') as id_razão_sucateado
+            , "modifieddate" as data_modificacao
         from source
     )
 

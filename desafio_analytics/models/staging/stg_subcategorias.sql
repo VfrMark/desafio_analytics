@@ -10,7 +10,7 @@ with
             , "productcategoryid" id_categoria_produto
             , "name" as nome
             , "rowguid" as guia_linha
-            , "modifieddate" as data_modificação
+            , "modifieddate" as data_modificacao
         from source
     )
 

@@ -49,7 +49,7 @@ with
             , "sellenddate" as data_fim_venda
             , "discontinueddate" as data_descontinuado
             , "rowguid" as guia_linha
-            , "modifieddate" as data_modificação
+            , "modifieddate" as data_modificacao
         from source
     )
 

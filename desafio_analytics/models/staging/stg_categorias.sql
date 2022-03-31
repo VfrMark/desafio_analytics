@@ -9,7 +9,7 @@ with
             "productcategoryid" as id_categoria_produto
             , "name" as nome
             , "rowguid" as guia_linha
-            , "modifieddate" as data_modificação
+            , cast("modifieddate" as date) as data_modificacao
         from {{source('analytics','raw_productcategory')}}
     )
 
