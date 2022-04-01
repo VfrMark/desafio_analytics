@@ -6,35 +6,34 @@ models:
     description:  Tabela de fatos das ordens de manufatura de produtos.
     columns:
 
-  - name: sk_ordens_servicos
-    description: Chave surrogate da fato ordens servicos.
-    tests:
-        - not_null
-        - unique
+    - name: sk_ordens_servicos
+      description: Chave surrogate da fato ordens servicos.
+      tests:
+          - not_null
 
-  - name: fk_produtos
-    description: Chave estrangeira da dimensão produtos.
+    - name: fk_produtos
+      description: Chave estrangeira da dimensão produtos.
 
-  - name: fk_sucateado
-    description: Chave estrangeira da dimensão sucateado.
+    - name: fk_sucateado
+      description: Chave estrangeira da dimensão sucateado.
 
-  - name: quantidade_ordem
-    description: Quantidade de produtos que serão construidos.
+    - name: quantidade_ordem
+      description: Quantidade de produtos que serão construidos.
 
-  - name: quantidade_sucateado
-    description: Quantidade de produtos que falharam na inspeção.
+    - name: quantidade_sucateado
+      description: Quantidade de produtos que falharam na inspeção.
 
-  - name: id_razão_sucateado
-    description: Chave natural da dimensão razão sucateado.
+    - name: id_razão_sucateado
+      description: Chave natural da dimensão razão sucateado.
 
-  - name: data_inicio
-    description: Data de inicio da manufatura da ordem de pedido.
+    - name: data_inicio
+      description: Data de inicio da manufatura da ordem de pedido.
 
-  - name: data_fim
-    description: Data de finalização da manufatura da ordem de pedido.
+    - name: data_fim
+      description: Data de finalização da manufatura da ordem de pedido.
 
-  - name: data_vencimento
-    description: Data de vencimento da manufatura da ordem de pedido.
+    - name: data_vencimento
+      description: Data de vencimento da manufatura da ordem de pedido.
 
-  - name: data_modificacao
-    description: Data em que o dado foi modificado.
+    - name: data_modificacao
+      description: Data em que o dado foi modificado.

@@ -10,7 +10,6 @@ models:
         description: Chave surrogate da dimensão produto.
         tests:
           - not_null
-          - unique
       - name: id_produto
         description: Chave natural do produto.
 

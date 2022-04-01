@@ -6,12 +6,10 @@ models:
       - name: FK_produto
         description: "A chave estrangeira da dim_produto deve ser única"
         tests: 
-          - unique
           - not_null
       - name: FK_localizacao
         description: "A chave estrangeira da dim_localizacao deve ser única"
         tests: 
-          - unique
           - not_null
       - name: quantidade
         description: "quantidade de produtos em uma certa localização determinada pelas chaves estrangeiras"

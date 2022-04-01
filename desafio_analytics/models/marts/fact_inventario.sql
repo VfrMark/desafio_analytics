@@ -2,19 +2,19 @@ with
     stg_productinventory as (
         select 
             *
-        from{{ref('stg_productinventory')}}
+        from {{ ref('stg_productinventory') }}
     )
 
     , dim_localizacao as (
         select
             *
-        from{{ref('dim_localizacao')}}
+        from {{ref('dim_localizacao')}}
     )
 
     , dim_produto as (
         select
             *
-        from{{ref('dim_produto')}}
+        from {{ref('dim_produtos')}}
     )
 
     , joined as (
@@ -30,4 +30,5 @@ with
         on dim_produto.id_produto = produto_inventario.id_produto 
     )
 
-select * from joined
+select * 
+from joined

@@ -14,7 +14,7 @@ with
        select *
        from data
        where
-           quantidade != 240
+           capacidade_manufatura != 240
    )
 select *
 from validation

@@ -3,15 +3,13 @@ models:
   - name: dim_localizacao
     description: "Esta é a tabela de dimensão localização."
     columns:
-      - name: sk_produto
+      - name: sk_localizacao
         description: "A chave surrogate da dim_localização deve ser única e não nula"
         tests: 
-          - unique
           - not_null
       - name: id_localizacao
         description: "id do armazém"
         tests:
-          - unique
           - not_null
       - name: nome_local
         description: "nome do local"

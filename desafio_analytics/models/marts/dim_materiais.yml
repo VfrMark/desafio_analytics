@@ -8,17 +8,14 @@ models:
         descriprion: "A chave surrogate da dim_materiais representa a identificação do produto pai . Ela deve ser única e não nula"
         tests:
           - not_null
-          - unique 
       - name: sk_produto_pai
         descriprion: "A chave surrogate da dim_materiais representa a identificação do produto pai. Ela deve ser única e não nula"
         tests:
           - not_null
-          - unique 
       - name: sk_componente
         descriprion: "A chave surrogate da dim_materiais representa a identificação do componente. Ela deve ser única e não nula"
         tests:
           - not_null
-          - unique 
       - name: id_material
         description: "Chave Primária. Registro da lista de materiais."
       - name: bomlevel
