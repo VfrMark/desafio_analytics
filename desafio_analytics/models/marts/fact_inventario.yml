@@ -1,0 +1,22 @@
+version: 2
+models:
+  - name: fact_inventario
+    description: "Esta é a tabela de fatos sobre o inventário dimensão de razões do sucateamentolocalizacao."
+    columns:
+      - name: FK_produto
+        description: "A chave estrangeira da dim_produto deve ser única"
+        tests: 
+          - unique
+          - not_null
+      - name: FK_localizacao
+        description: "A chave estrangeira da dim_localizacao deve ser única"
+        tests: 
+          - unique
+          - not_null
+      - name: quantidade
+        description: "quantidade de produtos em uma certa localização determinada pelas chaves estrangeiras"
+      - name: data_chegada
+        description: "data da chegada de produtos em uma localização, com a localização e produto sendo determinada pela chave estrangeira"
+
+
+      

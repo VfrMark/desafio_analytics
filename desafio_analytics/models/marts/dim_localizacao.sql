@@ -15,6 +15,5 @@ with
             , capacidade_manufatura
             , data_modificacao
         from staging
-    )
 
 select * from transformed

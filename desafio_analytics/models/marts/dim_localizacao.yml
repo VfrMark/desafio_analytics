@@ -9,12 +9,13 @@ models:
           - unique
           - not_null
       - name: id_localizacao
-        description: "id da localizacao"
-      - name: custo_hora
-        description: "custo por hora padrão do local de fabricação"
+        description: "id do armazém"
+        tests:
+          - unique
+          - not_null
       - name: nome_local
         description: "nome do local"
+      - name: custo_hora
+        description: "custo por hora padrão do local de fabricação"
       - name: capacidade_manufatura
         description: "Capacidade de trabalho (em horas) do local de fabricação."
-
-      
