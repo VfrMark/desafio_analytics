@@ -1,4 +1,4 @@
-/* This test ensures that the sum of actualcost of the "fact_fabricacao_detalhes" 
+/* This test ensures that the sum of actualcost of the "fact_ordem_servico_detalhes" 
 in June 2011 does not change over time for operationsequence = '1'*/
 
 with
