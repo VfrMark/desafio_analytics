@@ -37,8 +37,8 @@ with
     )
     , joined as (
         select
-            /*fact_ordens_servicos.sk_ordens_servicos
-            ,*/ dim_produto.sk_produtos
+            fact_ordens_servicos.sk_ordens_servicos
+            , dim_produto.sk_produtos
             , dim_localizacao.sk_localizacao
             , fact_ordem_servico_detalhes.id_ordem_servico 
             , fact_ordem_servico_detalhes.id_produto 
@@ -53,8 +53,8 @@ with
             , fact_ordem_servico_detalhes.data_fim_real
             , fact_ordem_servico_detalhes.data_modificacao
         from fact_ordem_servico_detalhes
-        /*left join fact_ordens_servicos
-            on fact_ordem_servico_detalhes.id_ordem_servico = fact_ordens_servicos.id_ordem_servico*/
+        left join fact_ordens_servicos
+            on fact_ordem_servico_detalhes.id_ordem_servico = fact_ordens_servicos.id_ordem_servico
         left join dim_produto
             on fact_ordem_servico_detalhes.id_produto = dim_produto.id_produto
         left join dim_localizacao     

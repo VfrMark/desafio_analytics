@@ -3,11 +3,11 @@ models:
   - name: fact_inventario
     description: "Esta é a tabela de fatos sobre o inventário dimensão de razões do sucateamentolocalizacao."
     columns:
-      - name: FK_produto
+      - name: fk_produtos
         description: "A chave estrangeira da dim_produto deve ser única"
         tests: 
           - not_null
-      - name: FK_localizacao
+      - name: fk_localizacao
         description: "A chave estrangeira da dim_localizacao deve ser única"
         tests: 
           - not_null

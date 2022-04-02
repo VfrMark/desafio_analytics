@@ -5,7 +5,7 @@ with
     data as (
        select
             count(motivo_sucateamento) as nome
-       from {{ ref('dim_sucateado') }}
+       from {{ ref('dim_sucateamento') }}
        where
             data_modificacao = '2008-04-30'
             and id_sucateamento between '1' and '16'

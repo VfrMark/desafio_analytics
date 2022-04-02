@@ -9,11 +9,11 @@ with
             , "productid" as id_produto
             , "orderqty" as quantidade_ordem
             , "scrappedqty" as quantidade_sucateado
-            , cast(startdate as date) as data_inicio
-            , cast(enddate as date) as data_fim
-            , cast (duedate as date) as data_vencimento
+            , cast(startdate as timestamp) as data_inicio
+            , cast(enddate as timestamp) as data_fim
+            , cast (duedate as timestamp) as data_vencimento
             , scrapreasonid as id_sucateamento
-            , cast(modifieddate as date) as data_modificacao
+            , cast(modifieddate as timestamp) as data_modificacao
         from source
     )
 

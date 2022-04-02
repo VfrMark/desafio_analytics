@@ -12,7 +12,7 @@ with
             , "bin" as caixa
             , "quantity" as quantidade_no_inventario
             , "rowguid" as guia_linha
-            , cast(modifieddate as date) as data_modificacao
+            , cast(modifieddate as timestamp) as data_modificacao
         from source
     )
 select * 

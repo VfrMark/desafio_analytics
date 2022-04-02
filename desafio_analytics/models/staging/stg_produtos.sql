@@ -45,11 +45,11 @@ with
             end as estilo
             , "productsubcategoryid" as id_subcategoria_produto
             , "productmodelid" as id_modelo_produto
-            , cast(sellstartdate as date) as data_inicio_venda
+            , cast(sellstartdate as timestamp) as data_inicio_venda
             , "sellenddate" as data_fim_venda
-            , cast(discontinueddate as date) as data_descontinuado
+            , cast(discontinueddate as timestamp) as data_descontinuado
             , "rowguid" as guia_linha
-            , cast(modifieddate as date) as data_modificacao
+            , cast(modifieddate as timestamp) as data_modificacao
         from source
     )
 
