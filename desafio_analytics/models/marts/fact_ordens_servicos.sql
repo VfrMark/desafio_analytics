@@ -21,6 +21,7 @@ with
             }} as sk_ordens_servicos
             , p.sk_produtos as fk_produtos
             , s.sk_sucateamento as fk_sucateados
+            , o.id_produto
             , o.id_ordem_servico
             , o.quantidade_ordem
             , o.quantidade_sucateado

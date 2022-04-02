@@ -6,10 +6,10 @@ with
     
     , transformed as (
         select 
-            "productsubcategoryid" as id_subcategoria_produto
-            , "productcategoryid" id_categoria_produto
-            , "name" as nome
-            , "rowguid" as guia_linha
+            productsubcategoryid as id_subcategoria_produto
+            , productcategoryid id_categoria_produto
+            , name as nome
+            , rowguid as guia_linha
             , cast(modifieddate as timestamp) as data_modificacao
         from source
     )
