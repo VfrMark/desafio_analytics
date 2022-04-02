@@ -7,8 +7,8 @@ with
 	        sum(custo_real) as custo_real
         from {{ ref('fact_ordem_servico_detalhes') }}
         where 
-	        sequencia_operacao = '1'
-	        and data_planejada_inicio_fabricacao between '2011-06-01' and '2011-06-30'
+	        sequencia_operacao = 1
+	        and data_planejada_inicio_fabricacao between '2011-06-01 00:00:00 UTC' and '2011-06-30 00:00:00 UTC'
     )
     , validation as (
         select *

@@ -5,8 +5,8 @@ with
     )
     , transformed as(
         select 
-            "scrapreasonid" as id_sucateamento
-            , "name" as motivo_sucateamento
+            scrapreasonid as id_sucateamento
+            , name as motivo_sucateamento
             , cast(modifieddate as timestamp) as data_modificacao
         from source
     )

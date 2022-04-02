@@ -26,7 +26,7 @@ with
             , stg_materiais_with_sk.id_produto_pai
             , stg_materiais_with_sk.id_componente
             , stg_materiais_with_sk.bomlevel
-            , stg_materiais_with_sk.qtd_por_pontagem
+            , stg_materiais_with_sk.qtd_por_montagem
             , stg_materiais_with_sk.data_inicio
             , stg_materiais_with_sk.data_fim
             , stg_materiais_with_sk.data_modificacao

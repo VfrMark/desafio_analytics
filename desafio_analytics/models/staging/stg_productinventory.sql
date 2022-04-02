@@ -6,12 +6,12 @@ with
 
     , transformed as (
         SELECT
-            "locationid" as id_localizacao
-            , "productid" as id_produto
-            , "shelf" as prateleira
-            , "bin" as caixa
-            , "quantity" as quantidade_no_inventario
-            , "rowguid" as guia_linha
+            locationid as id_localizacao
+            , productid as id_produto
+            , shelf as prateleira
+            , bin as caixa
+            , quantity as quantidade_no_inventario
+            , rowguid as guia_linha
             , cast(modifieddate as timestamp) as data_modificacao
         from source
     )

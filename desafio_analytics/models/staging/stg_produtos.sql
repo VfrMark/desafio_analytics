@@ -6,9 +6,9 @@ with
     
     , transformed as (
         select 
-            "productid" as id_produto
-            , "name" as nome
-            , "productnumber" as numero_produto
+            productid as id_produto
+            , name as nome
+            , productnumber as numero_produto
             , case 
                 when makeflag = false then 'comprado'
                 when makeflag = true then 'fabricado interno'
@@ -17,16 +17,16 @@ with
                 when finishedgoodsflag = false then 'não comercializável'
                 when finishedgoodsflag = true then 'comercializável'
             end as flag_produtos_finalizados
-            , "color" as cor
-            , "safetystocklevel" as estoque_minimo_seguro
-            , "reorderpoint" as estoque_minimo_critico
-            , "standardcost" as custo_padrao
-            , "listprice" as preco_venda
-            , "size" as tamanho
-            , "sizeunitmeasurecode" as unidade_medida_tamanho
-            , "weightunitmeasurecode" as unidade_medida_peso
-            , "weight" as peso
-            , "daystomanufacture" as dias_manufatura
+            , color as cor
+            , safetystocklevel as estoque_minimo_seguro
+            , reorderpoint as estoque_minimo_critico
+            , standardcost as custo_padrao
+            , listprice as preco_venda
+            , size as tamanho
+            , sizeunitmeasurecode as unidade_medida_tamanho
+            , weightunitmeasurecode as unidade_medida_peso
+            , weight as peso
+            , daystomanufacture as dias_manufatura
             , case 
                 when productline = 'R' then 'estrada'
                 when productline = 'M' then 'montanha'
@@ -43,12 +43,12 @@ with
                 when style = 'M' then 'homens'
                 when style = 'U' then 'universal'
             end as estilo
-            , "productsubcategoryid" as id_subcategoria_produto
-            , "productmodelid" as id_modelo_produto
+            , productsubcategoryid as id_subcategoria_produto
+            , productmodelid as id_modelo_produto
             , cast(sellstartdate as timestamp) as data_inicio_venda
-            , "sellenddate" as data_fim_venda
+            , sellenddate as data_fim_venda
             , cast(discontinueddate as timestamp) as data_descontinuado
-            , "rowguid" as guia_linha
+            , rowguid as guia_linha
             , cast(modifieddate as timestamp) as data_modificacao
         from source
     )

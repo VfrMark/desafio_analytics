@@ -7,8 +7,8 @@ with
             count(motivo_sucateamento) as nome
        from {{ ref('dim_sucateamento') }}
        where
-            data_modificacao = '2008-04-30'
-            and id_sucateamento between '1' and '16'
+            data_modificacao = '2008-04-30 00:00:00 UTC'
+            and id_sucateamento between 1 and 16
    )
    , validation as (
        select *

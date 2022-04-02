@@ -4,7 +4,7 @@ in March 2010 does not change over time*/
 with
     data as (
         select 
-	        sum(qtd_por_pontagem) as qnt_por_montagem
+	        sum(qtd_por_montagem) as qnt_por_montagem
         from {{ ref('dim_materiais') }}
         where 
             data_inicio between '2010-03-01' and '2010-03-30'
