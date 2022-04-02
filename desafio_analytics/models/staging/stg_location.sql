@@ -9,7 +9,7 @@ with
             , "costrate" as custo_hora
             , name as nome_local
             , "availability" as capacidade_manufatura
-            , cast(modifieddate as date) as data_modificacao
+            , cast(modifieddate as timestamp) as data_modificacao
         from source
     )
 select * from transformed

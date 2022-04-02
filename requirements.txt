@@ -1,1 +1,2 @@
 dbt-postgres == 1.0.4
+dbt-bigquery == 1.0.0

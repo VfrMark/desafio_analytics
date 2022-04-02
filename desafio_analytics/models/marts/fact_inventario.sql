@@ -19,10 +19,10 @@ with
 
     , joined as (
         select 
-        dim_produto.id_produto as FK_produto
-        , dim_localizacao.sk_localizacao as FK_localizacao
+        dim_produto.sk_produtos as fk_produtos
+        , dim_localizacao.sk_localizacao as fk_localizacao
         , produto_inventario.quantidade_no_inventario as quantidade
-        , produto_inventario.data_modificacao as data_mudanca
+        , produto_inventario.data_modificacao as data_modificacao
         from stg_productinventory as produto_inventario
         left join dim_localizacao
         on dim_localizacao.id_localizacao = produto_inventario.id_localizacao
