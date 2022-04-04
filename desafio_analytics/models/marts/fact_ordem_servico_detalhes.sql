@@ -37,9 +37,12 @@ with
     )
     , joined as (
         select
-            fact_ordens_servicos.sk_ordens_servicos
-            , dim_produto.sk_produtos
-            , dim_localizacao.sk_localizacao
+            {{ 
+                dbt_utils.surrogate_key(['sk_ordens_servicos', 'sk_produtos', 'sk_localizacao', 'fact_ordem_servico_detalhes.data_modificacao']) 
+            }} as sk_os_detalhes            
+            , fact_ordens_servicos.sk_ordens_servicos as fk_ordens_servicos
+            , dim_produto.sk_produtos as fk_produtos
+            , dim_localizacao.sk_localizacao as fk_localizacao
             , fact_ordem_servico_detalhes.id_ordem_servico 
             , fact_ordem_servico_detalhes.id_produto 
             , fact_ordem_servico_detalhes.id_localizacao 
