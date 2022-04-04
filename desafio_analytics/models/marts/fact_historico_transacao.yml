@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: fact_historico_transacao
+    description: "Tabela de métricas a nível de historico de transacao."
+    columns:
+      - name: sk_historico_transacao
+        description: "Chave surrogate referente a historico de transacao"
+        tests:
+          - not_null
+      - name: sk_produtos
+        description: "Chave estrangeira referente ao produto. Origem: dim_produto."
+        tests:
+          - not_null
+      - name: id_transacao
+        description: "ID transacao"
+      - name: id_transacao
+        description: "ID transacao"
+      - name: id_produto
+        description: "ID produto"
+      - name: data_transacao
+        description: "data transacao"
+      - name: tipo_transacao
+        description: "tipo transacao"
+      - name: qtd_produto
+        description: "qtd produto" 
+      - name: custo_produto
+        description: "custo produto"   
+      - name: data_modificacao
+        description: "data modificacao"  
