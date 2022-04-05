@@ -12,7 +12,7 @@ with
             , cast(startdate as timestamp) as data_inicio
             , cast(enddate as timestamp) as data_fim
             , cast (duedate as timestamp) as data_vencimento
-            , scrapreasonid as id_sucateamento
+            , coalesce(scrapreasonid, 0) as id_sucateamento
             , cast(modifieddate as timestamp) as data_modificacao
         from source
     )
