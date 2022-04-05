@@ -21,6 +21,8 @@ with
         select 
         dim_produto.sk_produtos as fk_produtos
         , dim_localizacao.sk_localizacao as fk_localizacao
+        , dim_produto.estoque_minimo_seguro
+        , dim_produto.estoque_minimo_critico
         , produto_inventario.quantidade_no_inventario as quantidade
         , produto_inventario.data_modificacao as data_modificacao
         from stg_productinventory as produto_inventario
