@@ -80,14 +80,14 @@ Agora o airbyte está rodando localmente, então visite: http://localhost:8000
 
 Configure suas preferências. Primeiramente, você deve ver uma página de integração, digite seu e-mail se quiser atualizações sobre o Airbyte e continue.
 
-Configure sua primeira conexão e crie uma fonte (source). conforme mostra a imagem abaixo:
+Configure sua primeira conexão e crie uma fonte (source).
 
 
-Então, crie uma destination, no nosso caso, estamos utilizando um banco de dados BigQuery, como a imagem abaixo:
+Então, crie uma destination, no nosso caso, estamos utilizando um banco de dados BigQuery.
 
  
  
-Agora que já tem uma source e uma destination, falta criar uma conexão (connection) entre os dois. No projeto a frequência de sincronização, fora manual e a extração de tabelas estratégicas (billofmaterials, location, product, productcategory, productcosthistory, productinventory, productsubcategory, scrapreason, transactionhistory, transactionhistoryarchive, workorder, workorderrouting) com o prefixo “raw_” para melhor controle. Como mostra o print abaixo
+Agora que já tem uma source e uma destination, falta criar uma conexão (connection) entre os dois. No projeto a frequência de sincronização, fora manual e a extração de tabelas estratégicas (billofmaterials, location, product, productcategory, productcosthistory, productinventory, productsubcategory, scrapreason, transactionhistory, transactionhistoryarchive, workorder, workorderrouting) com o prefixo “raw_” para melhor controle.
 
  
 
